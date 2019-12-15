@@ -1,7 +1,7 @@
 {
   "name": "sample-tests",
   "displayName": "sample-tests",
-  "description": "Sample integration tests for VS Code extension",
+  "description": "Sample Continuous Integration (CI) tests for VS Code extension",
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.40.0"
