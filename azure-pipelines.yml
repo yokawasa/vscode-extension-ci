@@ -14,39 +14,39 @@ trigger:
 # A single stage - test the extension 
 jobs:
 - job: 'Platform'
-  strategy:
-    maxParallel: 3
-    matrix:
-      linux:
-        imageName: 'ubuntu-16.04'
-        nodeVersion: '8.x'
-      mac:
-        imageName: 'macOS-10.13'
-        nodeVersion: '8.x'
-      windows:
-        imageName: 'VS2017-Win2016'
-        nodeVersion: '8.x'
   #strategy:
   #  maxParallel: 3
   #  matrix:
-  #    linux_node8:
+  #    linux:
   #      imageName: 'ubuntu-16.04'
-  #      nodeVersion: '8.x'
-  #    linux_node10:
-  #      imageName: 'ubuntu-16.04'
-  #      nodeVersion: '10.x'
-  #    mac_node8:
+  #     nodeVersion: '8.x'
+  #    mac:
   #      imageName: 'macOS-10.13'
   #      nodeVersion: '8.x'
-  #    mac_node10:
-  #      imageName: 'macOS-10.13'
-  #      nodeVersion: '10.x'
-  #    windows_node8:
+  #    windows:
   #      imageName: 'VS2017-Win2016'
   #      nodeVersion: '8.x'
-  #    windows_node10:
-  #      imageName: 'VS2017-Win2016'
-  #      nodeVersion: '10.x'
+  strategy:
+    maxParallel: 3
+    matrix:
+      linux_node8:
+        imageName: 'ubuntu-16.04'
+        nodeVersion: '8.x'
+      linux_node10:
+        imageName: 'ubuntu-16.04'
+        nodeVersion: '10.x'
+      mac_node8:
+        imageName: 'macOS-10.13'
+        nodeVersion: '8.x'
+      mac_node10:
+        imageName: 'macOS-10.13'
+        nodeVersion: '10.x'
+      windows_node8:
+        imageName: 'VS2017-Win2016'
+        nodeVersion: '8.x'
+      windows_node10:
+        imageName: 'VS2017-Win2016'
+        nodeVersion: '10.x'
 
   pool:
     vmImage: $(imageName)
