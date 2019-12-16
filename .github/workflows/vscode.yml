@@ -1,6 +1,14 @@
 name: VS Code extension CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+    #tags:
+    #  - v1
+    # file paths to consider in the event. Optional; defaults to all.
+    #paths:
+    #  - 'test/*'
 
 jobs:
   build:
