@@ -1,4 +1,8 @@
 # vscode-extension-ci
+
+⛔️**DEPRECATED**⛔️  This repository has been deprecated and please refer to [vscode-textbook/vscode-extension-ci](https://github.com/vscode-textbook/vscode-extension-ci) for the sample CI for VS Code extension!
+
+
 Sample Continuous Integration (CI) tests repository for VS Code extension
 
 | CI | Status Badge | 
